@@ -4,16 +4,36 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-ansible         = "<    10.0.0"
-ansible-creator = "==   24.6.1"
-ansible-lint    = "==   24.6.1"
-boto3           = "== 1.34.140"
-molecule        = "==   24.6.0"
-requests        = "<    2.32.0"
+
+# -----------------------------------------------------------------------------
+
+# Dependencies versions most up-to-date as of 2024-07-13:
+
+ansible-creator = "==   24.7.0"
+ansible-lint    = "==   24.7.0"
+boto3           = "== 1.34.144"
+molecule        = "==   24.7.0"
 yamllint        = "==   1.35.1"
+
+# -----------------------------------------------------------------------------
+
+# Using 'ansible < 10.0.0' to maintain rhel-8 / rockylinux-8 compatibility:
+# https://www.jeffgeerling.com/blog/2024/newer-versions-ansible-dont-work-rhel-8
+
+ansible         = "<    10.0.0"
+
+# -----------------------------------------------------------------------------
+
+# Using version 23.5.0 because of the issue that is reported here:
+# https://github.com/ansible-community/molecule-plugins/issues/239
+
+# Fix is ready but not merged yet. Details here:
+# https://github.com/ansible-community/molecule-plugins/pull/240
 
 "molecule-plugins[ec2]"     = "== 23.5.0"
 "molecule-plugins[docker]"  = "== 23.5.0"
 "molecule-plugins[vagrant]" = "== 23.5.0"
+
+# -----------------------------------------------------------------------------
 
 [dev-packages]
