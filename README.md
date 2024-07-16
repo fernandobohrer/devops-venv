@@ -28,6 +28,11 @@ Please refer to your operating system package manager and/or documentation to in
 
 1. To completely remove the virtual environment, run `make cleanup`;
 
+## 📝 License
+
+This project is licensed under the terms of the [MIT license][04].
+
 [01]: https://pipenv.pypa.io/en/latest/
 [02]: https://www.redhat.com/sysadmin/developing-ansible-role
 [03]: https://ansible.readthedocs.io/projects/creator/installing/#initialize-ansible-project
+[04]: /LICENSE
