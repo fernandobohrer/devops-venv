@@ -22,7 +22,7 @@ Please refer to your operating system package manager and/or documentation to in
 
     1. To create a new Ansible role: `ansible-galaxy role init role_name`. More details can be found [here][02].
 
-    1. To create a new Ansible project: `ansible-creator init --project ansible-project --scm-org weather --scm-project demo`. More details can be found [here][03].
+    1. To create a new Ansible project: `ansible-creator init --project ansible-project --scm-org organization --scm-project project`. More details can be found [here][03].
 
 1. When finished with your work, simple exit the virtual environment by typing `exit` on the terminal. This will bring you back to the directory where this repository lives.
 
