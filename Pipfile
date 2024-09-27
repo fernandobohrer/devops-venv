@@ -9,18 +9,12 @@ name = "pypi"
 
 # Dependencies versions most up-to-date as of 2024-09-26:
 
+ansible         = "==  10.4.0"
 ansible-creator = "==  24.9.0"
 ansible-lint    = "==  24.9.2"
 boto3           = "== 1.35.28"
 molecule        = "==  24.9.0"
 yamllint        = "==  1.35.1"
-
-# -----------------------------------------------------------------------------
-
-# Using 'ansible < 10.0.0' to maintain rhel-8 / rockylinux-8 compatibility:
-# https://www.jeffgeerling.com/blog/2024/newer-versions-ansible-dont-work-rhel-8
-
-ansible         = "<    10.0.0"
 
 # -----------------------------------------------------------------------------
 
