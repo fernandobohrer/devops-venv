@@ -7,12 +7,12 @@ name = "pypi"
 
 # +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 
-# Dependencies versions most up-to-date as of 2024-09-26:
+# Most up-to-date versions of dependencies as of 2024-10-03:
 
 ansible         = "==  10.4.0"
 ansible-creator = "==  24.9.0"
 ansible-lint    = "==  24.9.2"
-boto3           = "== 1.35.28"
+boto3           = "== 1.35.33"
 molecule        = "==  24.9.0"
 yamllint        = "==  1.35.1"
 
@@ -23,6 +23,9 @@ yamllint        = "==  1.35.1"
 
 # Fix is ready but not merged yet. Details here:
 # https://github.com/ansible-community/molecule-plugins/pull/240
+
+# As of 2024-10-03 the fix mentioned above is now merged however a
+# new version of the molecule-plugins package was not released yet.
 
 "molecule-plugins[ec2]"     = "== 23.5.0"
 "molecule-plugins[docker]"  = "== 23.5.0"
