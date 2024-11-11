@@ -1,11 +1,13 @@
+.PHONY: default
+default: _cleanup _bootstrap
 
-.PHONY: bootstrap
-bootstrap:
+.PHONY: _bootstrap
+_bootstrap:
 	@ mkdir -p .venv
 	@ pipenv install > /dev/null 2>&1
 	@ pipenv shell
 
-.PHONY: cleanup
-cleanup:
+.PHONY: _cleanup
+_cleanup:
 	@ if [ -d ".venv" ] ; then pipenv --rm ; fi
 	@ rm -rf Pipfile.lock
