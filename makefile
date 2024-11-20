@@ -11,8 +11,7 @@ bootstrap: _pipenv-install
 
 .PHONY: cleanup
 cleanup:
-	@ if [ -d ".venv" ] ; then pipenv --rm ; fi
-	@ rm -rf Pipfile.lock
+	@ rm -rf .venv Pipfile.lock
 
 .PHONY: check-updates
 check-updates: _pipenv-install
