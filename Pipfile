@@ -11,9 +11,9 @@ name = "pypi"
 "boto3"                     = "== 1.35.78"
 "mitogen"                   = "==  0.3.19"
 "molecule"                  = "== 24.12.0"
-"yamllint"                  = "==  1.35.1"
 "molecule-plugins[ec2]"     = "==  23.6.0"
 "molecule-plugins[docker]"  = "==  23.6.0"
 "molecule-plugins[vagrant]" = "==  23.6.0"
+"yamllint"                  = "==  1.35.1"
 
 [dev-packages]
