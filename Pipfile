@@ -19,18 +19,9 @@ yamllint        = "==  1.35.1"
 
 # +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 
-# Using version 23.5.0 because of the issue that is reported here:
-# https://github.com/ansible-community/molecule-plugins/issues/239
-
-# Fix is ready and was merged already. Details here:
-# https://github.com/ansible-community/molecule-plugins/pull/240
-
-# As of 2024-12-10 the fix mentioned above is now merged however a
-# new version of the molecule-plugins package was not released yet.
-
-"molecule-plugins[ec2]"     = "== 23.5.0"
-"molecule-plugins[docker]"  = "== 23.5.0"
-"molecule-plugins[vagrant]" = "== 23.5.0"
+"molecule-plugins[ec2]"     = "== 23.6.0"
+"molecule-plugins[docker]"  = "== 23.6.0"
+"molecule-plugins[vagrant]" = "== 23.6.0"
 
 # +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 
