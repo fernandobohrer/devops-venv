@@ -6,10 +6,10 @@ name = "pypi"
 [packages]
 
 "ansible"                   = "==  11.1.0"
-"ansible-lint"              = "== 24.12.2"
+"ansible-lint"              = "==  25.1.0"
 "ansible-creator"           = "==  25.0.0"
 "boto3"                     = "==  1.36.2"
-"mitogen"                   = "==  0.3.20"
+"mitogen"                   = "==  0.3.21"
 "molecule"                  = "== 24.12.0"
 "molecule-plugins[ec2]"     = "==  23.6.0"
 "molecule-plugins[docker]"  = "==  23.6.0"
