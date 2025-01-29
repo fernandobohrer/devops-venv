@@ -15,4 +15,5 @@ cleanup:
 
 .PHONY: check-updates
 check-updates: _pipenv-install
-	@ pipenv update --bare --outdated
+	@ pipenv run pip list --outdated | egrep -v "pip|resolvelib|setuptools"
+	@make -s cleanup
