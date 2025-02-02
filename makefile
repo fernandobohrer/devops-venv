@@ -1,5 +1,7 @@
 .DEFAULT_GOAL := bootstrap
 
+UPDATES_TO_IGNORE = molecule|pip|resolvelib|setuptools
+
 .PHONY: _pipenv-install
 _pipenv-install:
 	@ mkdir -p .venv
@@ -15,5 +17,5 @@ cleanup:
 
 .PHONY: check-updates
 check-updates: _pipenv-install
-	@ pipenv run pip list --outdated | egrep -v "pip|resolvelib|setuptools"
+	@ pipenv run pip list --outdated | egrep -v "${UPDATES_TO_IGNORE}"
 	@make -s cleanup
