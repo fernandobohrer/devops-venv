@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := bootstrap
 
-UPDATES_TO_IGNORE = ansible |ansible-core|molecule|pip|resolvelib|setuptools
+UPDATES_TO_IGNORE = molecule-plugins|resolvelib|setuptools
 
 .PHONY: _pipenv-install
 _pipenv-install:
