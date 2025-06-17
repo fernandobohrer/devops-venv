@@ -9,7 +9,7 @@ UPDATES_TO_IGNORE = molecule-plugins|resolvelib|setuptools
 .PHONY: .pipenv-install
 .pipenv-install:
 	@ mkdir -p .venv
-	@ pipenv install > /dev/null 2>&1
+	@ pipenv install --skip-lock > /dev/null 2>&1
 
 .PHONY: bootstrap
 bootstrap: .pipenv-install
