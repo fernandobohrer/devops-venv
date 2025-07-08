@@ -8,7 +8,7 @@ dependencies = [
     "boto3== 1.38.40",
     "mitogen==0.3.24",
     "yamllint==1.37.1",
-    "molecule==25.6.0",
+    "molecule==24.12.0",
     "molecule-plugins[ec2]==23.6.0",
     "molecule-plugins[docker]==23.6.0",
     "molecule-plugins[vagrant]==23.6.0",

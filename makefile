@@ -14,7 +14,7 @@ help:
 	@echo "     cleanup          Removes the virtualenv and lock file"
 
 REQUIREMENTS_FILE := pyproject.toml
-UPDATES_TO_IGNORE := molecule-plugins
+UPDATES_TO_IGNORE := molecule|molecule-plugins
 CUSTOM_BASHRC := /tmp/.bootstrap_bashrc_$(shell head /dev/urandom | tr -dc a-z0-9 | head -c 8)
 
 .PHONY: _install-dependencies
