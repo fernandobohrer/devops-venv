@@ -2,16 +2,19 @@
 name = ""
 version = "0.0.1"
 dependencies = [
-    "ansible==11.7.0",
-    "ansible-lint==25.6.1",
-    "ansible-creator==25.6.0",
-    "boto3== 1.38.40",
-    "mitogen==0.3.24",
-    "yamllint==1.37.1",
-    "molecule==24.12.0",
-    "molecule-plugins[ec2]==23.6.0",
-    "molecule-plugins[docker]==23.6.0",
-    "molecule-plugins[vagrant]==23.6.0",
+    "ansible          ==  11.7.0",
+    "ansible-lint     ==  25.6.1",
+    "ansible-creator  ==  25.6.0",
+    "boto3            ==  1.39.3",
+    "mitogen          ==  0.3.24",
+    "yamllint         ==  1.37.1",
+
+    # Dependencies kept back due to compatibility issues:
+
+    "molecule                   == 24.12.0",
+    "molecule-plugins[ec2]      ==  23.6.0",
+    "molecule-plugins[docker]   ==  23.6.0",
+    "molecule-plugins[vagrant]  ==  23.6.0",
 ]
 
 [dependency-groups]
