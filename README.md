@@ -1,10 +1,10 @@
-# Ansible virtual environment
+# devops virtual environment
 
-This repository creates a Python based virtual environment using `uv`. The dependencies listed in the `pyproject.toml` file get installed automatically to the virtual environment.
+This repository creates a `python` based virtual environment using `uv`. The dependencies listed in the `pyproject.toml` file get installed automatically to the virtual environment.
 
 ## 🚀 Motivation
 
-The virtual environment that gets created from this repository can be used to work on the development of Ansible roles and playbooks.
+The virtual environment that gets created from this repository can be used to work on the development of Ansible roles and playbooks and on other devops related activities.
 
 The main advantage of this approach based on a virtual environment is related to the fact that the dependencies listed in the `pyproject.toml` file will not affect nor interact with other versions of these packages you might have installed locally already.
 
@@ -16,9 +16,9 @@ Please refer to your operating system package manager and/or documentation to in
 
 ## ⚡ Quick start
 
-1. To create and initialize the Python based virtual environment, run `make bootstrap`;
+1. To create and initialize the `python` based virtual environment, run `make bootstrap`;
 
-1. Switch to any local directory where you are working on Ansible related activities to leverage tools like `ansible`, `ansible-creator`, `ansible-galaxy`, `ansible-lint`, `ansible-playbook`, `ansible-vault`, `molecule` and `yamllint`.
+1. Switch to any local directory where you are working on Ansible related activities to leverage tools like `ansible`, `ansible-creator`, `ansible-galaxy`, `ansible-lint`, `ansible-playbook`, `ansible-vault`, `molecule`, `pre-commit` and `yamllint`.
 
    1. To create a new Ansible role: `ansible-galaxy role init role-name`. More details can be found [here][02].
 
