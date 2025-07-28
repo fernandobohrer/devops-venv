@@ -9,9 +9,9 @@ _check-target:
 .PHONY: help
 help:
 	@echo "💡 Available targets:"
-	@echo "     bootstrap            Creates a virtual environment and launches bash with the virtualenv active"
-	@echo "     check-for-updates    Checks for dependencies updates (ignoring: $(UPDATES_TO_IGNORE))"
-	@echo "     cleanup              Removes the virtualenv and lock file"
+	@echo "     bootstrap            Creates a virtual environment and launches a bash shell with the virtualenv activated."
+	@echo "     check-for-updates    Checks for dependencies updates (excluding: $(UPDATES_TO_IGNORE))."
+	@echo "     cleanup              Removes the virtual environment and associated lock file."
 
 REQUIREMENTS_FILE := pyproject.toml
 UPDATES_TO_IGNORE := molecule|molecule-plugins
