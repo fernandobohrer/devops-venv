@@ -9,9 +9,9 @@ _check-target:
 .PHONY: help
 help:
 	@echo "💡 Available targets:"
-	@echo "     bootstrap        Creates a virtual environment and launches bash with the virtualenv active"
-	@echo "     check-updates    Shows outdated packages (ignoring: $(UPDATES_TO_IGNORE))"
-	@echo "     cleanup          Removes the virtualenv and lock file"
+	@echo "     bootstrap            Creates a virtual environment and launches bash with the virtualenv active"
+	@echo "     check-for-updates    Shows outdated packages (ignoring: $(UPDATES_TO_IGNORE))"
+	@echo "     cleanup              Removes the virtualenv and lock file"
 
 REQUIREMENTS_FILE := pyproject.toml
 UPDATES_TO_IGNORE := molecule|molecule-plugins
@@ -34,8 +34,8 @@ bootstrap: _install-dependencies
 	@rm -f "$(CUSTOM_BASHRC)"
 	@echo "⬅️  Deactivated virtual environment."
 
-.PHONY: check-updates
-check-updates: _install-dependencies
+.PHONY: check-for-updates
+check-for-updates: _install-dependencies
 	@echo "📜 Outdated packages (excluding: $(UPDATES_TO_IGNORE)):"
 	@uv tree --outdated --depth 1 --quiet \
 		| grep latest \
