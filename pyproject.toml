@@ -10,7 +10,7 @@ dependencies = [
   "pre-commit       ==   4.2.0",
   "yamllint         ==  1.37.1",
 
-  # Dependencies kept back due to compatibility issues:
+  # Dependencies that have been kept out of date due to compatibility issues:
 
   "molecule                   == 24.12.0",
   "molecule-plugins[ec2]      ==  23.6.0",
