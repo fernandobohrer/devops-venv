@@ -36,7 +36,7 @@ bootstrap: _install-dependencies
 
 .PHONY: check-for-updates
 check-for-updates: _install-dependencies
-	@echo "🔍 Checking for dependencies updates (excluding: $(UPDATES_TO_IGNORE)):"
+	@echo "🔍 Checking for dependencies updates (excluding: $(UPDATES_TO_IGNORE)).."
 	@UPDATES=$$(uv tree --outdated --depth 1 --quiet | grep latest | grep -vE "$(UPDATES_TO_IGNORE)" | sed 's/^[├└┬── ]*//'); \
 		if [ -n "$$UPDATES" ]; then \
 			echo "⚠️  The dependencies below are out of date:"; \
