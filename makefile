@@ -10,7 +10,7 @@ _check-target:
 help:
 	@echo "💡 Available targets:"
 	@echo "     bootstrap            Creates a virtual environment and launches bash with the virtualenv active"
-	@echo "     check-for-updates    Shows outdated packages (ignoring: $(UPDATES_TO_IGNORE))"
+	@echo "     check-for-updates    Checks for dependencies updates (ignoring: $(UPDATES_TO_IGNORE))"
 	@echo "     cleanup              Removes the virtualenv and lock file"
 
 REQUIREMENTS_FILE := pyproject.toml
@@ -19,14 +19,14 @@ CUSTOM_BASHRC := /tmp/.bootstrap_bashrc_$(shell head /dev/urandom | tr -dc a-z0-
 
 .PHONY: _install-dependencies
 _install-dependencies:
-	@echo "🏗️  Installing dependencies..."
+	@echo "🏗️  Installing dependencies.."
 	@uv venv --quiet
 	@uv pip install --native-tls -r $(REQUIREMENTS_FILE) --quiet
 	@echo "🚀 Dependencies installed."
 
 .PHONY: bootstrap
 bootstrap: _install-dependencies
-	@echo "➡️  Activating virtual environment..."
+	@echo "➡️  Activating virtual environment.."
 	@echo '[ -f ~/.bashrc ] && source ~/.bashrc' > "$(CUSTOM_BASHRC)"
 	@echo 'source .venv/bin/activate' >> "$(CUSTOM_BASHRC)"
 	@echo 'trap "exit 0" EXIT' >> "$(CUSTOM_BASHRC)"
@@ -36,11 +36,16 @@ bootstrap: _install-dependencies
 
 .PHONY: check-for-updates
 check-for-updates: _install-dependencies
-	@echo "📜 Outdated packages (excluding: $(UPDATES_TO_IGNORE)):"
-	@uv tree --outdated --depth 1 --quiet \
-		| grep latest \
-		| grep -vE "$(UPDATES_TO_IGNORE)" \
-		| sed 's/^[├└┬── ]*//'
+	@echo "🔍 Checking for dependencies updates (excluding: $(UPDATES_TO_IGNORE)):"
+	@UPDATES=$$(uv tree --outdated --depth 1 --quiet | grep latest | grep -vE "$(UPDATES_TO_IGNORE)" | sed 's/^[├└┬── ]*//'); \
+		if [ -n "$$UPDATES" ]; then \
+			echo "⚠️  The dependencies below are out of date:"; \
+			echo ""; \
+			echo "$$UPDATES"; \
+			echo ""; \
+		else \
+			echo "✅ All dependencies are up to date!"; \
+		fi
 	@make -s cleanup
 
 .PHONY: cleanup
