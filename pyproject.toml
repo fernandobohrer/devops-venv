@@ -5,8 +5,8 @@ dependencies = [
   "ansible          ==  11.8.0",
   "ansible-lint     ==  25.7.0",
   "ansible-creator  ==  25.7.1",
-  "boto3            ==  1.40.0",
-  "mitogen          ==  0.3.25",
+  "boto3            ==  1.40.2",
+  "mitogen          ==  0.3.26",
   "pre-commit       ==   4.2.0",
   "yamllint         ==  1.37.1",
 
