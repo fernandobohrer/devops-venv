@@ -5,11 +5,11 @@ dependencies = [
 
   # Dependencies with set versions - pinned for stability and compatibility:
 
-  "ansible         == 11.8.0",
-  "ansible-lint    == 25.7.0",
+  "ansible         == 11.9.0",
+  "ansible-lint    == 25.8.1",
   "ansible-creator == 25.7.1",
   "mitogen         == 0.3.26",
-  "pre-commit      ==  4.2.0",
+  "pre-commit      ==  4.3.0",
   "yamllint        == 1.37.1",
 
   # Dependencies set to use the latest version - to allow easy access to new features:
