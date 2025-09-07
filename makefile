@@ -20,7 +20,7 @@ CUSTOM_BASHRC := /tmp/.bootstrap_bashrc_$(shell head /dev/urandom | tr -dc a-z0-
 .PHONY: _install-dependencies
 _install-dependencies:
 	@echo "🏗️  Installing dependencies.."
-	@uv venv --quiet
+	@uv venv --clear --quiet
 	@uv pip install --native-tls -r $(REQUIREMENTS_FILE) --quiet
 	@echo "🚀 Dependencies installed."
 
