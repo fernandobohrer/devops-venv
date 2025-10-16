@@ -10,11 +10,10 @@ _check-target:
 help:
 	@echo "💡 Available targets:"
 	@echo "     bootstrap            Creates the virtual environment and launches a bash shell with the virtualenv activated."
-	@echo "     check-for-updates    Checks for dependencies updates (excluding: $(UPDATES_TO_IGNORE))."
+	@echo "     check-for-updates    Checks for dependencies updates."
 	@echo "     cleanup              Removes the virtual environment and associated lock file."
 
 REQUIREMENTS_FILE := pyproject.toml
-UPDATES_TO_IGNORE := molecule|molecule-plugins
 CUSTOM_BASHRC := /tmp/.bootstrap_bashrc_$(shell head /dev/urandom | tr -dc a-z0-9 | head -c 8)
 
 .PHONY: _install-dependencies
@@ -36,8 +35,8 @@ bootstrap: _install-dependencies
 
 .PHONY: check-for-updates
 check-for-updates: _install-dependencies
-	@echo "🔍 Checking for dependencies updates (excluding: $(UPDATES_TO_IGNORE)).."
-	@UPDATES=$$(uv --native-tls tree --outdated --depth 1 --quiet | grep latest | grep -vE "$(UPDATES_TO_IGNORE)" | sed 's/^[├└┬── ]*//'); \
+	@echo "🔍 Checking for dependencies updates.."
+	@UPDATES=$$(uv --native-tls tree --outdated --depth 1 --quiet | grep latest | sed 's/^[├└┬── ]*//'); \
 		if [ -n "$$UPDATES" ]; then \
 			echo "⚠️  The dependencies below are out of date:"; \
 			echo ""; \
