@@ -5,12 +5,12 @@ dependencies = [
 
   "boto3",
 
-  "ansible                    ==   12.2.0",
+  "ansible                    ==   13.0.0",
   "ansible-lint               ==  25.11.0",
   "ansible-creator            ==  25.11.0",
-  "mitogen                    ==   0.3.31",
+  "mitogen                    ==   0.3.33",
   "yamllint                   ==   1.37.1",
-  "pre-commit                 ==    4.4.0",
+  "pre-commit                 ==    4.5.0",
   "molecule                   ==  25.11.0",
   "molecule-plugins[ec2]      ==  25.8.12",
   "molecule-plugins[docker]   ==  25.8.12",
