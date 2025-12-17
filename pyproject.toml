@@ -10,7 +10,7 @@ dependencies = [
   "ansible-creator            ==  25.12.0",
   "mitogen                    ==   0.3.35",
   "yamllint                   ==   1.37.1",
-  "pre-commit                 ==    4.5.0",
+  "pre-commit                 ==    4.5.1",
   "molecule                   ==  25.12.0",
   "molecule-plugins[ec2]      ==  25.8.12",
   "molecule-plugins[docker]   ==  25.8.12",
