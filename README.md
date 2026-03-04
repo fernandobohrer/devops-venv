@@ -1,4 +1,4 @@
-# devops virtual environment
+# devops-venv
 
 This repository creates a `python` based virtual environment using `uv` and automatically installs the dependencies listed in the `pyproject.toml` file into the environment.
 
