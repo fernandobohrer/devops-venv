@@ -19,7 +19,6 @@ Refer to your operating system's package manager or documentation to install the
 1. To create and initialize the `python` based virtual environment, run `make bootstrap`.
 
 1. Switch to any directory where you are working on Ansible related activities to leverage tools like `ansible`, `ansible-creator`, `ansible-galaxy`, `ansible-lint`, `ansible-playbook`, `ansible-vault`, `molecule`, `pre-commit` and `yamllint`.
-
    1. To create a new Ansible role: `ansible-galaxy role init role-name`. More details can be found [here][02].
 
    1. To create a new Ansible project: `ansible-creator init playbook organization.project`. More details can be found [here][03].
