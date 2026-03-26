@@ -5,7 +5,7 @@ dependencies = [
 
   "boto3",
 
-  "ansible                    ==   13.4.0",
+  "ansible                    ==   13.5.0",
   "ansible-lint               ==   26.3.0",
   "ansible-creator            ==   26.3.2",
   "mitogen                    ==   0.3.44",
