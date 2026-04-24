@@ -1,28 +1,18 @@
 [project]
-name = ""
+name = "devops"
 version = "0.0.1"
 dependencies = [
-
   "boto3",
-
-  "ansible                    ==   13.6.0",
-  "ansible-lint               ==   26.4.0",
-  "ansible-creator            ==   26.4.2",
-  "mitogen                    ==   0.3.47",
-  "yamllint                   ==   1.38.0",
-  "pre-commit                 ==    4.6.0",
-  "molecule                   ==   26.4.0",
-  "molecule-plugins[ec2]      ==  25.8.12",
-  "molecule-plugins[docker]   ==  25.8.12",
-  "molecule-plugins[vagrant]  ==  25.8.12",
+  "ansible                                 ==   13.6.0",
+  "ansible-lint                            ==   26.4.0",
+  "ansible-creator                         ==   26.4.2",
+  "mitogen                                 ==   0.3.47",
+  "yamllint                                ==   1.38.0",
+  "pre-commit                              ==    4.6.0",
+  "molecule                                ==   26.4.0",
+  "molecule-plugins[docker, ec2, vagrant]  ==  25.8.12",
 ]
-
-[dependency-groups]
-dev = []
 
 [tool.uv]
 package = false
-
-[[tool.uv.index]]
-name = "pypi"
-url = "https://pypi.org/simple"
+index = [{ name = "pypi", url = "https://pypi.org/simple" }]
