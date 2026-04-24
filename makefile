@@ -32,6 +32,7 @@ bootstrap: _install-dependencies
 	@bash --rcfile "$(CUSTOM_BASHRC)"
 	@rm -f "$(CUSTOM_BASHRC)"
 	@echo "⬅️  Deactivated virtual environment."
+	@make -s cleanup
 
 .PHONY: check-for-updates
 check-for-updates: _install-dependencies
