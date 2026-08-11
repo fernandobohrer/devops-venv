@@ -3,12 +3,12 @@ name = "dv"
 version = "0.0.1"
 dependencies = [
   "boto3",
-  "ansible                                 ==   14.2.0",
+  "ansible                                 ==   14.3.0",
   "ansible-lint                            ==   26.6.0",
   "ansible-creator                         ==   26.6.1",
   "mitogen                                 ==   0.3.51",
   "yamllint                                ==   1.38.0",
-  "pre-commit                              ==    4.6.1",
+  "pre-commit                              ==    4.6.2",
   "molecule                                ==   26.6.0",
   "molecule-plugins[docker, ec2, vagrant]  ==  26.7.15",
 ]
