@@ -10,7 +10,7 @@ dependencies = [
   "yamllint                                ==   1.38.0",
   "pre-commit                              ==    4.6.2",
   "molecule                                ==   26.9.0",
-  "molecule-plugins[docker, ec2, vagrant]  ==  26.7.15",
+  "molecule-plugins[docker, ec2, vagrant]  ==  26.9.28",
 ]
 
 [tool.uv]
