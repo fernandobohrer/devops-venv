@@ -20,7 +20,7 @@ CUSTOM_BASHRC := /tmp/.bootstrap_bashrc_$(shell head /dev/urandom | tr -dc a-z0-
 _install-dependencies:
 	@echo "🏗️  Installing dependencies.."
 	@uv venv --clear --quiet
-	@uv pip install --native-tls -r $(REQUIREMENTS_FILE) --quiet
+	@uv pip install -r $(REQUIREMENTS_FILE) --quiet
 	@echo "🚀 Dependencies installed."
 
 .PHONY: bootstrap
@@ -37,7 +37,7 @@ bootstrap: _install-dependencies
 .PHONY: check-for-updates
 check-for-updates: _install-dependencies
 	@echo "🔍 Checking for dependencies updates.."
-	@UPDATES=$$(uv --native-tls tree --outdated --depth 1 --quiet | grep latest | sed 's/^[├└┬── ]*//'); \
+	@UPDATES=$$(uv tree --outdated --depth 1 --quiet | grep latest | sed 's/^[├└┬── ]*//'); \
 		if [ -n "$$UPDATES" ]; then \
 			echo "⚠️  The dependencies below are out of date:"; \
 			echo ""; \
